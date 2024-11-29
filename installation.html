@@ -40,10 +40,6 @@
             padding: 15px;
             border-radius: 5px;
         }
-	image{
-		width: 50px;
-		height: 50px;
-	}
     </style>
 </head>
 <body>
@@ -55,19 +51,19 @@
 <div class="container">
     <p>To install Travis CI on Ubuntu, it is important to clarify that Travis CI is primarily a cloud-based service that integrates with GitHub repositories. You don’t install Travis CI directly on your local machine or server, but you can set up a local environment for testing your .travis.yml configurations using a tool called Travis CLI.</p>
     <ul>
-        <li>Step 1: Sign Up for Travis CI
+        <li><strong>Step 1: Sign Up for Travis CI</strong>
     		<p>1 Go to Travis CI.</p>
-		<p><img src=".images/travis-ci.png" class="image"></p>
+		<p><img src="./images/travis-ci.png" width=200, height=150,></p>
     		<p>2 Sign in with your GitHub account.</p>
-		<p><img src=".images/sign-in.png" class="image"></p>
+		<p><img src="./images/sign-in.png" width=200, height=150,></p>
     		<p>3 Authorize Travis CI to access your GitHub repositories.</p>
-		<p><img src=".images/repositories.png" class="image"></p>
+		<p><img src="./images/repositories.png" width=200, height=150,></p>
     	</li>
-        <li>Step 2: Enable Travis CI for Your Repository
+        <li><strong>Step 2: Enable Travis CI for Your Repository</strong>
     		<p>1  Once logged in, go to your profile on Travis CI.</p>
     		<p>2 Find your repository in the list and toggle the switch to enable Travis CI for it.</p>
 	</li>
-        <li>Step 3: Create a .travis.yml Configuration File
+        <li><strong>Step 3: Create a .travis.yml Configuration File</strong>
     		<p>1 Open your terminal and navigate to your project directory:
 		cd /path/to/your/project</p>
 		<p>2 Create a file named .travis.yml:
@@ -75,7 +71,7 @@
 		<p>3 Add the configuration for your project
 		Adjust the contents of the .travis.yml file based on your project’s requirements.</p>
 	</li>
-        <li>Step 4: Commit and Push Your Changes
+        <li><strong>Step 4: Commit and Push Your Changes</strong>
     		<p>1 Stage the .travis.yml file:
 		git add .travis.yml</p>
 		<p>2 Commit the changes:
@@ -83,7 +79,7 @@
 		<p>3 Push to your GitHub repository:
 		git push origin master</p>
 	</li>
-        <li>Step 5: Check Your Travis CI Build
+        <li><strong>Step 5: Check Your Travis CI Build</strong>
     		<p>1 Go to your Travis CI dashboard.</p>
     		<p>2 You should see your build triggered automatically after you pushed the changes.</p>
     		<p>3 Click on the build to see the logs and results.</p>
