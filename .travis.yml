@@ -1,29 +1,11 @@
 language: node_js
 node_js:
-  - "14"  # Specify the Node.js version
+  - "14"  # Specify the Node.js version if you need one
 
-# Install dependencies if needed (e.g., for static site generators)
-install:
-  - npm install
+# Install necessary dependencies for HTML validation
+before_install:
+  - npm install -g htmlhint  # Install HTMLHint globally
 
-# Script to run tests or build the site
+# Define the script to run during the build
 script:
-  - npm run build  # Replace with your build command if needed
-
-# Deploy settings
-deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN  # Set this in your Travis CI settings
-  local_dir: public  # Change this to your build directory if different
-  on:
-    branch: main  # Deploy only from the main branch
-
-# Optional: Notifications for build status
-notifications:
-  email:
-    recipients:
-      - awaradiana40@gmail.com  # Replace with your email
-    on_success: change
-    on_failure: always
-
+  - htmlhint ./*.html  # Validate all HTML files in the root directory
